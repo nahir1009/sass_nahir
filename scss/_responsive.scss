@@ -1,0 +1,101 @@
+/* ==================  TABLETS ==================  */
+@media (min-width: 480px) and (max-width: 1023px) {
+  /* ======== Estilos Generales ======== */
+
+  /* === pagina index === */
+  .card {
+    width: 16rem;
+    margin: 10px;
+  }
+  .section-principal {
+    justify-content: center;
+  }
+
+  .div__contactos {
+    display: flex;
+    flex-direction: row;
+  }
+  h1 {
+    width: 1000px;
+  }
+  .div__redes {
+    width: 250px;
+  }
+
+  .descuento__rebaja {
+    height: 100px;
+    width: auto;
+  }
+  /* ======== Grid Areas Layout ======== */
+  /* === pagina index === */
+  .body__index {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto;
+  }
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
+
+/* ==================  DESKTOP ================== */
+@media (min-width: 1024px) {
+  #carouselExampleControls {
+    width: 90%;
+  }
+  h1 {
+    width: 1200px;
+  }
+  .icono-footer {
+    width: 45px;
+  }
+  .footer__p {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .card {
+    width: 16rem;
+    .card-title {
+      font-size: 14px;
+    }
+    .card-text {
+      font-size: 14px;
+    }
+  }
+
+  /* ======== Grid Areas Layout ======== */
+  .body__index {
+    display: grid;
+    grid-template-areas:
+      " header header header"
+      "main main main"
+      " footer footer footer";
+    grid-template-columns: 5% auto 20%;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}

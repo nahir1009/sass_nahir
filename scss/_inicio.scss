@@ -1,0 +1,233 @@
+/* ============ resets y tipografias ==============   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Chakra Petch", "Oswald", sans-serif;
+}
+
+@font-face {
+  font-family: Tungsten-Bold;
+  src: url("./tipografia/Tungsten-Bold.ttf");
+}
+/* ==================  MOBILE ==================  */
+
+/* ======== Estilos Generales ======== */
+.section-principal {
+  display: flex;
+  flex-flow: row wrap;
+  .card {
+    width: 10rem;
+    margin: 5px;
+    .card-body {
+      text-align: center;
+      font-size: 14px;
+      .card-title {
+        font-size: 12px;
+      }
+      .card-text {
+        font-size: 10px;
+      }
+    }
+  }
+}
+
+.div_principal {
+  display: flex;
+  justify-content: space-between;
+  .div__ubicacion {
+    width: 400px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .div__redes {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .div__contactos {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    /*box model*/
+    padding: 30px;
+    width: 100%;
+    margin: 5px;
+    /*texto*/
+    font-family: "Chackra Petch";
+    text-align: center;
+    font-size: 25px;
+    text-shadow: $gris_oscuro -1px 2px;
+    /*visuales*/
+    color: white;
+    background-color: $celeste_h1;
+    border: solid $gris_h1 4px;
+  }
+  #carouselExampleControls {
+    width: 95%;
+    .carrusel-img {
+      width: 98%;
+      height: 300px;
+    }
+  }
+}
+main {
+  background-color: $celeste_main;
+}
+
+header {
+  background-color: $celeste_header;
+}
+
+footer {
+  /*visuales*/
+  background-color: $gris_h1;
+  border: solid $gris_footer 6px;
+  .icono-footer {
+    width: 35px;
+  }
+  .footer__p {
+    font-size: 12px;
+  }
+  h4 {
+    font-size: 12px;
+  }
+}
+
+/* ======== Grid Areas Layout ======== */
+/* === pagina index === */
+.body__index {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 100%;
+}
+.header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* ==================  TABLETS ==================  */
+@media (min-width: 480px) and (max-width: 1023px) {
+  /* ======== Estilos Generales ======== */
+
+  /* === pagina index === */
+  .card {
+    width: 16rem;
+    margin: 10px;
+  }
+  .section-principal {
+    justify-content: center;
+  }
+
+  .div__contactos {
+    display: flex;
+    flex-direction: row;
+  }
+  h1 {
+    width: 1000px;
+  }
+  .div__redes {
+    width: 250px;
+  }
+
+  .descuento__rebaja {
+    height: 100px;
+    width: auto;
+  }
+  /* ======== Grid Areas Layout ======== */
+  /* === pagina index === */
+  .body__index {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "main main"
+      "footer footer";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto;
+  }
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}
+
+/* ==================  DESKTOP ================== */
+@media (min-width: 1024px) {
+  #carouselExampleControls {
+    width: 90%;
+  }
+  h1 {
+    width: 1200px;
+  }
+  .icono-footer {
+    width: 45px;
+  }
+  .footer__p {
+    font-size: 14px;
+  }
+  h4 {
+    font-size: 15px;
+  }
+  .card {
+    width: 16rem;
+    .card-title {
+      font-size: 14px;
+    }
+    .card-text {
+      font-size: 14px;
+    }
+  }
+
+  /* ======== Grid Areas Layout ======== */
+  .body__index {
+    display: grid;
+    grid-template-areas:
+      " header header header"
+      "main main main"
+      " footer footer footer";
+    grid-template-columns: 5% auto 20%;
+  }
+
+  header {
+    grid-area: header;
+  }
+
+  main {
+    grid-area: main;
+  }
+
+  footer {
+    grid-area: footer;
+  }
+}

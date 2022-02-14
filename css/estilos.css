@@ -1,0 +1,166 @@
+/* ============ resets y tipografias ==============   */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", "Chakra Petch", "Oswald", sans-serif; }
+
+@font-face {
+  font-family: Tungsten-Bold;
+  src: url("./tipografia/Tungsten-Bold.ttf"); }
+
+/* ==================  MOBILE ==================  */
+/* ======== Estilos Generales ======== */
+.section-principal {
+  display: flex;
+  flex-flow: row wrap; }
+  .section-principal .card {
+    width: 10rem;
+    margin: 5px; }
+    .section-principal .card .card-body {
+      text-align: center;
+      font-size: 14px; }
+      .section-principal .card .card-body .card-title {
+        font-size: 12px; }
+      .section-principal .card .card-body .card-text {
+        font-size: 10px; }
+
+.div_principal {
+  display: flex;
+  justify-content: space-between; }
+  .div_principal .div__ubicacion {
+    width: 400px;
+    display: flex;
+    flex-direction: row; }
+  .div_principal .div__redes {
+    width: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  .div_principal .div__contactos {
+    width: 400px;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end; }
+
+.titulo {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .titulo h1 {
+    /*box model*/
+    padding: 30px;
+    width: 100%;
+    margin: 5px;
+    /*texto*/
+    font-family: "Chackra Petch";
+    text-align: center;
+    font-size: 25px;
+    text-shadow: #78807d -1px 2px;
+    /*visuales*/
+    color: white;
+    background-color: #8fcaca;
+    border: solid #b6cfb6 4px; }
+  .titulo #carouselExampleControls {
+    width: 95%; }
+    .titulo #carouselExampleControls .carrusel-img {
+      width: 98%;
+      height: 300px; }
+
+main {
+  background-color: #cce2cb; }
+
+header {
+  background-color: #d4f0f0; }
+
+footer {
+  /*visuales*/
+  background-color: #b6cfb6;
+  border: solid #c4c2bc 6px; }
+  footer .icono-footer {
+    width: 35px; }
+  footer .footer__p {
+    font-size: 12px; }
+  footer h4 {
+    font-size: 12px; }
+
+/* ======== Grid Areas Layout ======== */
+/* === pagina index === */
+.body__index {
+  display: grid;
+  grid-template-areas: "header" "main" "footer";
+  grid-template-columns: 100%; }
+
+.header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+footer {
+  grid-area: footer; }
+
+/* ==================  TABLETS ==================  */
+@media (min-width: 480px) and (max-width: 1023px) {
+  /* ======== Estilos Generales ======== */
+  /* === pagina index === */
+  .card {
+    width: 16rem;
+    margin: 10px; }
+  .section-principal {
+    justify-content: center; }
+  .div__contactos {
+    display: flex;
+    flex-direction: row; }
+  h1 {
+    width: 1000px; }
+  .div__redes {
+    width: 250px; }
+  .descuento__rebaja {
+    height: 100px;
+    width: auto; }
+  /* ======== Grid Areas Layout ======== */
+  /* === pagina index === */
+  .body__index {
+    display: grid;
+    grid-template-areas: "header header" "main main" "footer footer";
+    grid-template-columns: 80% 20%;
+    grid-template-rows: auto auto; }
+  header {
+    grid-area: header; }
+  main {
+    grid-area: main; }
+  footer {
+    grid-area: footer; } }
+
+/* ==================  DESKTOP ================== */
+@media (min-width: 1024px) {
+  #carouselExampleControls {
+    width: 90%; }
+  h1 {
+    width: 1200px; }
+  .icono-footer {
+    width: 45px; }
+  .footer__p {
+    font-size: 14px; }
+  h4 {
+    font-size: 15px; }
+  .card {
+    width: 16rem; }
+    .card .card-title {
+      font-size: 14px; }
+    .card .card-text {
+      font-size: 14px; }
+  /* ======== Grid Areas Layout ======== */
+  .body__index {
+    display: grid;
+    grid-template-areas: " header header header" "main main main" " footer footer footer";
+    grid-template-columns: 5% auto 20%; }
+  header {
+    grid-area: header; }
+  main {
+    grid-area: main; }
+  footer {
+    grid-area: footer; } }
